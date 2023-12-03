@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This website was created by
+    Author : Jakaria Talukdar
+    WhatsApp : +880 1798-165091 
+    Telegram : https://t.me/FreelancerXakaria
+    Skype : live:.cid.30337a0103de3db4
+    Facebook : https://www.facebook.com/jakaria.talukdar2001
+    Note : call 01798165091 for live contract -->
+    <meta name="description" content="Simple JavaScript Calculator by Jakaria Talukdar">
+    <meta name="keywords" content="calculator, javaScript, javaScript calculator, simple calculator, HTML, Css, JavaScript, HTML CSS JavaScript Calculator">
+    <meta name="author" content="Jakaria Talukdar">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator | javaScript practice | Jakaria Takukdar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="calculator-inner1 calculator-inner">
+                <input type="text" name="display" id="display" placeholder="0">
+            </div>
+            <div class="calculator-inner2 calculator-inner">
+                <button class="top-line" onclick="clearAll()">AC</button>
+                <button class="top-line" onclick="dataInput('(')">(</button>
+                <button class="top-line" onclick="dataInput(')')">)</button>
+                <button class="oporator" onclick="dataInput('/')">/</button>
+            </div>
+            <div class="calculator-inner3 calculator-inner">
+                <button onclick="dataInput('7')">7</button>
+                <button onclick="dataInput('8')">8</button>
+                <button onclick="dataInput('9')">9</button>
+                <button class="oporator" onclick="dataInput('*')">*</button>
+            </div>
+            <div class="calculator-inner4 calculator-inner">
+                <button onclick="dataInput('4')">4</button>
+                <button onclick="dataInput('5')">5</button>
+                <button onclick="dataInput('6')">6</button>
+                <button class="oporator" onclick="dataInput('-')">-</button>
+            </div>
+            <div class="calculator-inner5 calculator-inner">
+                <button onclick="dataInput('1')">1</button>
+                <button onclick="dataInput('2')">2</button>
+                <button onclick="dataInput('3')">3</button>
+                <button class="oporator" onclick="dataInput('+')">+</button>
+            </div>
+            <div class="calculator-inner6 calculator-inner">
+                <button onclick="dataInput('0')">0</button>
+                <button onclick="dataInput('00')">00</button>
+                <button onclick="dataInput('.')">.</button>
+                <button class="oporator" onclick="equal()">=</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function dataInput (inputNumber){
+            document.getElementById('display').value += inputNumber;
+        }
+        function equal(){
+            let input = document.getElementById('display').value;
+            let result = eval(input);
+            document.getElementById('display').value = result;
+        }
+        function clearAll() {
+            document.getElementById('display').value = '';
+        }
+    </script>
+</body>
+</html>
